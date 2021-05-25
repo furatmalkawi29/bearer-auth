@@ -55,7 +55,7 @@ users.statics.authenticateBearer =
         try {
             console.log(process.env.SECRET);
             
-            const payload = jwt.verify(token, process.env.SECRET);
+            const payload = jwt.verify(token, process.env.SECRET, {expiresIn:'15m'});
             console.log('payload', payload);
 
             const user = await this.findOne({

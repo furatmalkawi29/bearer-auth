@@ -24,16 +24,11 @@ authRouter.post('/signup', async (req, res, next) => {
 });
 
 authRouter.post('/signin', basicAuth, (req, res, next) => {
-  try {
   const user = {
     user: req.user,
     token: req.user.token
   };
   res.status(200).json(user);
-  }
-  catch {
-    res.status(403);
-  }
 });
 
 authRouter.get('/users', bearerAuth, async (req, res, next) => {
