@@ -29,7 +29,6 @@ module.exports = async (req, res, next) => {
         next();
     } catch (error) {
         //invalid login (wrong password / username)
-        error.statusCode =403;
-        next(error);
+        res.status(403).send('Invalid Login');
     }
 }
