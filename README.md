@@ -15,7 +15,7 @@ Furat Malkawi
 
 ## Links
 
-* [Deployed App](beare-auth-furat.herokuapp.com/)
+* [Deployed App](https://dashboard.heroku.com/apps/beare-auth-furat)
 * [Error Report](https://github.com/furatmalkawi29/bearer-auth/tree/main/.github/workflows)
 
 <hr>
