@@ -7,8 +7,8 @@ const cors = require('cors');
 const morgan = require('morgan');
 
 //import
-// const errorHandler = require('./error-handlers/500.js');
-// const notFound = require('./error-handlers/404.js');
+const errorHandler = require('./middleware/500.js');
+const notFound = require('./middleware/404.js');
 const authRoutes = require('./auth/router.js');
 
 // Prepare the express app
@@ -25,8 +25,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(authRoutes);
 
 // Catchalls
-// app.use(notFound);
-// app.use(errorHandler);
+app.use(notFound);
+app.use(errorHandler);
 
 module.exports = {
   server: app,

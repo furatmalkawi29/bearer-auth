@@ -7,7 +7,7 @@ const server = require('./src/server.js');
 
 mongoose
     .connect(process.env.MONGOOSE_URI,
-        { useNewUrlParser: true, useUnifiedTopology: true })
+        { useNewUrlParser: true, useUnifiedTopology: true , useCreateIndex: true,})
     .then(() => {
         server.start(process.env.PORT);
         console.log(process.env.PORT);
